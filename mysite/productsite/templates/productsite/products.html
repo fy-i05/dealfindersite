@@ -1,0 +1,24 @@
+{% extends 'productsite/base.html' %}
+
+{% block content %}
+<div id="sidebar" class="sidebar">
+    <!-- Categories will be loaded here -->
+</div>
+
+<div id="main-content">
+    <header>
+        <!-- Top navigation bar -->
+        <button onclick="toggleSidebar()">Toggle Sidebar</button>
+    </header>
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product">
+            <a href="{{ product.link }}" target="_blank">
+                <img src="{{ product.image }}" alt="{{ product.name }}">
+                <p>{{ product.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
