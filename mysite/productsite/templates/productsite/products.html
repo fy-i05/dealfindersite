@@ -2,12 +2,14 @@
 
 {% block content %}
 <div id="sidebar" class="sidebar">
-    <!-- Categories will be loaded here -->
+    <ul>
+        {% for category in categories %}
+        <li><a href="javascript:void(0);" onclick="filterByCategory('{{ category.id }}');">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
-
 <div id="main-content">
     <header>
-        <!-- Top navigation bar -->
         <button onclick="toggleSidebar()">Toggle Sidebar</button>
     </header>
     <div class="product-grid">
@@ -15,8 +17,10 @@
         <div class="product">
             <a href="{{ product.link }}" target="_blank">
                 <img src="{{ product.image }}" alt="{{ product.name }}">
-                <p>{{ product.name }}</p>
+                <p class="product-name">{{ product.name }}</p>
             </a>
+            <p>Price: {{ product.price }}</p>
+            <p>Deal Rating: {{ product.get_deal_rating }}</p>
         </div>
         {% endfor %}
     </div>

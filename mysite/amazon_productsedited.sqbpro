@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="amazon_products.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2936"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="productsite_products_categories" custom_title="0" dock_id="2" table="4,31:mainproductsite_products_categories"/><dock_state state="000000ff00000000fd0000000100000002000004c9000002e6fc0100000002fb000000160064006f0063006b00420072006f007700730065003101000000000000043c0000000000000000fb000000160064006f0063006b00420072006f00770073006500320100000000000004c90000011e00ffffff000002880000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="auth_group" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="39"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="productsite_products_categories" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="76"/><column index="3" value="76"/></column_widths><filter_values/><conditional_formats><column index="2"/></conditional_formats><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">INSERT INTO productsite_products_categories (products_id, category_id) VALUES
+(31,25706),
+(32,25706),
+(33,25706),
+(34,25706),
+(35,25706),
+(36,25706),
+(37,25709),
+(38,25706),
+(39,25706),
+(40,25706),
+(41,25709),
+(42,25709),
+(43,25706),
+(44,25706),
+(45,25706),
+(46,25709),
+(47,25709),
+(48,25708);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

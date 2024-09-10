@@ -1,8 +1,14 @@
 from django.contrib import admin
 from .models import Products, Category
-# Register your models here.
 
-admin.site.register(Products)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'price', 'original_price', 'current_price', 'get_deal_rating')
+    search_fields = ('name', 'category__name') 
+
+admin.site.register(Products, ProductAdmin)
+
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'parent')
-    search_fields = ('name',) #search box for searching items
+    list_display = ('name', 'id', 'parent')
+    search_fields = ('name',)
