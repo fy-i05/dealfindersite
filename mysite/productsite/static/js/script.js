@@ -1,22 +1,13 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
     const mainContent = document.getElementById('main-content');
-    //check current width to decide whether to open or close  sidebar
-    
-    if (window.innerWidth <= 480) {  //check if the device width is less than or equal to 480px (phone?)
-        if (sidebar.style.width === '0px') {
-            sidebar.style.width = '100px';  
-            mainContent.style.marginLeft = '150px';  
-        } else {
-            sidebar.style.width = '0px';  //close
-            mainContent.style.marginLeft = '0px';
-        }
-    } else {
-        // For larger screens 
-        sidebar.style.width = sidebar.style.width === '250px' ? '0px' : '250px';
-        mainContent.style.marginLeft = sidebar.style.marginLeft === '250px' ? '0px' : '250px';
-    }
-}
+
+    sidebarToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        mainContent.classList.toggle('active'); //move products based on sidebar state (if closed then products fill screen)
+    });
+});
 
 
 function filterByCategory(categoryId) {
@@ -62,3 +53,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('main-content');
+    if (sidebar.style.width === '0px') {
+        sidebar.style.width = '250px';
+        mainContent.style.marginLeft = '250px';
+    } else {
+        sidebar.style.width = '0px';
+        mainContent.style.marginLeft = '0px';
+    }
+}
